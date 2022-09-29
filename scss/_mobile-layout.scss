@@ -1,0 +1,18 @@
+@media (max-width: 50em) {
+  .container{
+    margin-top: 2rem;
+    width: calc(100% - 4rem);
+    margin-inline: auto;
+    height: auto;
+  }
+  .even-columns{
+    grid-auto-flow: row;
+
+    .sedans{
+        border-radius: var(--corner) var(--corner) 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 var(--corner) var(--corner);
+    }
+  }
+}

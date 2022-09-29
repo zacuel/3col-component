@@ -1,0 +1,37 @@
+.content{
+    button{
+        &:hover,
+        &:focus-visible{
+        color: var(--very-light-grey);
+        }
+    }
+    .sedan-button{
+        &:hover,
+        &:focus-visible{       
+        background-color: var(--bright-orange);
+        }
+    }
+    .suv-button{
+        &:hover,
+        &:focus-visible{       
+        background-color: var(--dark-cyan);
+        }
+    }
+    .luxury-button{
+        &:hover,
+        &:focus-visible{       
+        background-color: var(--very-dark-cyan);
+        }
+    }
+}
+
+// button{
+//     &:hover,
+//     &:focus-visible{
+//         color: var(--very-light-grey) !important;
+
+//         .sedan-button{
+//             background-color: var(--bright-orange);
+//         }
+//     }
+// }

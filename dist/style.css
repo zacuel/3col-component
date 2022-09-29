@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&family=Lexend+Deca:wght@100;200;300;400&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 15px;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.8;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, .8);
+  --very-light-grey: hsl(0, 0%, 95%);
+  --transparent-grey: hsla(0, 0%, 95%, .9) ;
+}
+
+:root {
+  --ff-paragraph: "Lexend Deca", sans-serif;
+  --ff-heading: "Big Shoulders Display", cursive;
+  --fw-regular: 300;
+  --fw-bold: 500;
+  --fs-paragraph: 1.05rem;
+  --fs-button: 1.2rem;
+  --fs-heading: 2.8rem;
+}
+
+.section-heading {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-heading);
+  color: var(--transparent-grey);
+}
+
+.content p {
+  font-size: var(--fs-paragraph);
+  font-weight: var(--fw-regular);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-paragraph);
+  color: var(--transparent-white);
+}
+.content button {
+  font-size: var(--fs-button);
+  font-family: var(--ff-paragraph);
+  background-color: var(--very-light-grey);
+  border: 3px solid var(--very-light-grey);
+}
+
+:root {
+  --corner: .55rem;
+}
+
+body {
+  background-color: white;
+}
+
+.container {
+  width: 63rem;
+  height: 35rem;
+  margin-inline: auto;
+  margin-top: 13rem;
+  border-radius: var(--corner);
+  margin-bottom: 2rem;
+}
+
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+.even-columns .sedans {
+  background-color: var(--bright-orange);
+  border-radius: var(--corner) 0 0 var(--corner);
+}
+.even-columns .sedans button {
+  color: var(--bright-orange);
+}
+.even-columns .suvs {
+  background-color: var(--dark-cyan);
+}
+.even-columns .suvs button {
+  color: var(--dark-cyan);
+}
+.even-columns .luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 var(--corner) var(--corner) 0;
+}
+.even-columns .luxury button {
+  color: var(--very-dark-cyan);
+}
+.even-columns .content {
+  height: 29rem;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.even-columns .content button {
+  margin-top: auto;
+  border-radius: 100vmax;
+  padding: 0.6rem 1.7rem;
+}
+
+@media (max-width: 50em) {
+  .container {
+    margin-top: 2rem;
+    width: calc(100% - 4rem);
+    margin-inline: auto;
+    height: auto;
+  }
+  .even-columns {
+    grid-auto-flow: row;
+  }
+  .even-columns .sedans {
+    border-radius: var(--corner) var(--corner) 0 0;
+  }
+  .even-columns .luxury {
+    border-radius: 0 0 var(--corner) var(--corner);
+  }
+}
+.content button:hover, .content button:focus-visible {
+  color: var(--very-light-grey);
+}
+.content .sedan-button:hover, .content .sedan-button:focus-visible {
+  background-color: var(--bright-orange);
+}
+.content .suv-button:hover, .content .suv-button:focus-visible {
+  background-color: var(--dark-cyan);
+}
+.content .luxury-button:hover, .content .luxury-button:focus-visible {
+  background-color: var(--very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+:root{
+    --corner: .55rem;
+}
+
+
+
+body{
+    background-color: white;
+}
+
+.container{  
+    width: 63rem;
+    height: 35rem;
+    margin-inline: auto;
+    margin-top: 13rem; 
+    border-radius: var(--corner);
+    margin-bottom: 2rem;
+}
+
+.even-columns{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+    .sedans{
+        background-color: var(--bright-orange);
+        border-radius: var(--corner) 0 0 var(--corner);
+        button{
+            color: var(--bright-orange);
+        }
+        
+    }
+    .suvs{
+        background-color: var(--dark-cyan);
+        button{
+            color: var(--dark-cyan);
+        }
+    }
+    .luxury{
+        background-color: var(--very-dark-cyan);
+        border-radius: 0 var(--corner) var(--corner) 0;
+        button{
+            color: var(--very-dark-cyan);
+        }
+    }
+    .content{
+        height: 29rem;
+        margin: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem; 
+      
+        button{
+            margin-top: auto;
+            border-radius: 100vmax;
+            padding: .6rem 1.7rem; 
+
+        }
+    }
+}
+
